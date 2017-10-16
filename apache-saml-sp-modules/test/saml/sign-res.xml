@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<saml2p:Response xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" Destination="http://lnx6.openiamdemo.com/idp/saml2/sp/login" ID="_58b5a115e0282b4b6a5704ef4e353be1" InResponseTo="_a36898121ed192226a1710d9a3ec0ccf" IssueInstant="2017-03-15T21:39:09.170Z" Version="2.0">
+    <saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">http://localhost.openiam.com:8080/idp/saml2/idp/login</saml2:Issuer>
+    <saml2p:Status>
+        <saml2p:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+    </saml2p:Status>
+    <saml2:Assertion xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" ID="_3839712731aed3856792b67490456a00" IssueInstant="2017-03-15T21:39:09.170Z" Version="2.0">
+        <saml2:Issuer>http://localhost.openiam.com:8080/idp/saml2/idp/login</saml2:Issuer>
+        <saml2:Subject>
+            <saml2:NameID Format="urn:oasis:names:tc:SAML:1.1:nameid-format:transient">sysadmin</saml2:NameID>
+            <saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+                <saml2:SubjectConfirmationData InResponseTo="_a36898121ed192226a1710d9a3ec0ccf" NotOnOrAfter="2017-03-15T21:49:09.170Z" Recipient="http://lnx6.openiamdemo.com/idp/saml2/sp/login"/>
+            </saml2:SubjectConfirmation>
+        </saml2:Subject>
+        <saml2:Conditions NotBefore="2017-03-25T22:56:09.170Z" NotOnOrAfter="2017-03-31T22:59:09.170Z">
+            <saml2:AudienceRestriction>
+                <saml2:Audience>SLO-SP</saml2:Audience>
+            </saml2:AudienceRestriction>
+        </saml2:Conditions>
+        <saml2:AuthnStatement AuthnInstant="2017-03-15T21:39:09.170Z">
+            <saml2:AuthnContext>
+                <saml2:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</saml2:AuthnContextClassRef>
+            </saml2:AuthnContext>
+        </saml2:AuthnStatement>
+    </saml2:Assertion>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference>
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>o2oVWF0IJAQS1nACUkiHSgRxKFI=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>sekQjnmpUvveIV3CrbTNjX8YZg/avEIJQfgRaXHiA6jKV+j0VUFTRgO6cDAqrrdJ
+yGvkhf2zKY04CUcJHfL3Dxpkf44pc0BUh19AyAnNYaNUlXzq0YKOQNgBNrV9yNz4
+fm7wjJyMi300jjSp1FclWqAOhs8yKLERo8gcurBSDNM=</SignatureValue>
+<KeyInfo>
+<X509Data>
+<X509SubjectName>emailAddress=alexander.lesin@openiam.com,CN=Openiam,OU=Openiam,O=Openiam,L=New York,ST=New York,C=US</X509SubjectName>
+<X509Certificate>MIIC+jCCAmOgAwIBAgIJAJCOxv2mH+nuMA0GCSqGSIb3DQEBCwUAMIGVMQswCQYD
+VQQGEwJVUzERMA8GA1UECAwITmV3IFlvcmsxETAPBgNVBAcMCE5ldyBZb3JrMRAw
+DgYDVQQKDAdPcGVuaWFtMRAwDgYDVQQLDAdPcGVuaWFtMRAwDgYDVQQDDAdPcGVu
+aWFtMSowKAYJKoZIhvcNAQkBFhthbGV4YW5kZXIubGVzaW5Ab3BlbmlhbS5jb20w
+HhcNMTcwMzI0MTExNTE3WhcNMTgwMzI0MTExNTE3WjCBlTELMAkGA1UEBhMCVVMx
+ETAPBgNVBAgMCE5ldyBZb3JrMREwDwYDVQQHDAhOZXcgWW9yazEQMA4GA1UECgwH
+T3BlbmlhbTEQMA4GA1UECwwHT3BlbmlhbTEQMA4GA1UEAwwHT3BlbmlhbTEqMCgG
+CSqGSIb3DQEJARYbYWxleGFuZGVyLmxlc2luQG9wZW5pYW0uY29tMIGfMA0GCSqG
+SIb3DQEBAQUAA4GNADCBiQKBgQDBeo5SmQ0jP5dacPpoP+z+8XtZSxE3vVj9KYHK
+KGRzvuN4Hl42dckZtAaxgzVSEcG5TPPOQYvEXdCYhLT5O+AXdwXW9rb0igvhIaDd
+apfR34DKRkiltw3wopk1q8qR2Q6WYpXyH/XCD0rYpBSOXJe/8AyaReySBcta2d60
+bNtk/QIDAQABo1AwTjAdBgNVHQ4EFgQUC7pBpGmTq6XPADOG6ea8LbrX0WwwHwYD
+VR0jBBgwFoAUC7pBpGmTq6XPADOG6ea8LbrX0WwwDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQsFAAOBgQBVjpq5FDzFbkfvfnxjG9Achfia5zRMvKxj5+Gh2p+WrOT7
+IWj7LEnfIX3m9Fq/MXvhTy9j1kaPqtNNU0K4QDf/b9C9Btio1bONvtOc1uKygiHK
+sLeMBpDNsDr9yfKZ+Y9uvLUAmmR7ZJr+g7PswaeyNtLQJa1qz+dnmteieUvgag==</X509Certificate>
+</X509Data>
+</KeyInfo>
+</Signature></saml2p:Response>

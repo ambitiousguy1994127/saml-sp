@@ -1,0 +1,10 @@
+aclocal.m4
+config.log
+config.status
+configure
+autom4te.cache/
+scripts/
+mod_saml_sp.*
+Makefile
+Makefile.in
+!mod_saml_sp.c

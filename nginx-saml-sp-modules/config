@@ -1,0 +1,28 @@
+ngx_module_type=HTTP
+ngx_module_name=ngx_http_saml_sp_module
+ngx_module_incs="/usr/include/libxml2 /usr/include/xmlsec1"
+ngx_module_deps="													\
+				$ngx_addon_dir/src/ngx_http_saml_sp_module.h 		\
+				$ngx_addon_dir/src/saml.h 							\
+				$ngx_addon_dir/src/crypto.h 						\
+				$ngx_addon_dir/src/request.h 						\
+				$ngx_addon_dir/src/cookies.h 						\
+				$ngx_addon_dir/src/logging.h 						\
+				"
+ngx_module_srcs="													\
+				$ngx_addon_dir/src/ngx_http_saml_sp_module.c 		\
+				$ngx_addon_dir/src/saml.c 							\
+				$ngx_addon_dir/src/crypto.c 						\
+				$ngx_addon_dir/src/request.c 						\
+				$ngx_addon_dir/src/cookies.c 						\
+				$ngx_addon_dir/src/logging.c 						\
+				"
+ngx_module_libs="`xml2-config --libs` -lcrypto -L/usr/local/lib -L/usr/lib64 -L/usr/lib -lxmlsec1 -lxmlsec1-openssl -lz"
+
+CFLAGS="$CFLAGS `xml2-config --cflags` -I/usr/include -I/usr/include/xmlsec1 -I/usr/local/include/xmlsec1 -DXMLSEC_NO_SIZE_T -DXMLSEC_CRYPTO_OPENSSL=1 -DXMLSEC_NO_XSLT=1 -DUNIX_SOCKETS"
+
+ngx_module_order=
+
+. auto/module
+
+have=NGX_HTTP_HEADERS . auto/have
